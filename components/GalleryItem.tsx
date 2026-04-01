@@ -13,11 +13,13 @@ interface GalleryItemProps {
 
 export default function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   const thumbSrc = item.src.thumb || item.src.full;
-  const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
+  const isPriority = index < 6;
+  const [loaded, setLoaded] = useState(isPriority);
+  const [inView, setInView] = useState(isPriority);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (isPriority) return;
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
@@ -27,11 +29,11 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
           obs.disconnect();
         }
       },
-      { rootMargin: "100px" }
+      { rootMargin: "200px" }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [isPriority]);
 
   return (
     <motion.div
@@ -56,6 +58,8 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
         alt={item.title || item.category}
         width={item.width || 600}
         height={item.height || 400}
+        priority={isPriority}
+        loading={isPriority ? "eager" : "lazy"}
         placeholder={item.blurData ? "blur" : "empty"}
         blurDataURL={item.blurData}
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

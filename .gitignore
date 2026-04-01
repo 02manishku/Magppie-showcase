@@ -38,10 +38,10 @@ yarn-error.log*
 
 # raw media (too large for git)
 /public/media/raw/
-# optimized media (regenerated from raw)
-/public/media/optimized/
 # raw source visuals (too large for git, 279MB+)
 /public/Visuals/
+# original uncompressed video
+/public/double-height.mp4
 
 # typescript
 *.tsbuildinfo

@@ -22,6 +22,10 @@ export default function RootLayout({
     <html lang="en" className="antialiased">
       <head>
         <link rel="dns-prefetch" href="https://magppie.com" />
+        <link rel="preload" href="/hero-compressed.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-001.webp" as="image" />
+        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-002.webp" as="image" />
+        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-003.webp" as="image" />
       </head>
       <body>{children}</body>
     </html>

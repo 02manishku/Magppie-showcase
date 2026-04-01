@@ -47,7 +47,7 @@ export default function Hero() {
             poster="/media/optimized/images/full/kitchen-real-001.webp"
             className="h-full w-full object-cover object-center"
           >
-            <source src="/double-height.mp4" type="video/mp4" />
+            <source src="/hero-compressed.mp4" type="video/mp4" />
           </video>
         </div>
       </motion.div>
