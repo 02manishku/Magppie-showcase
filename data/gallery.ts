@@ -83,6 +83,20 @@ export const galleryItems: GalleryItem[] = [
     }
   },
   {
+    "id": "5a",
+    "type": "image",
+    "category": "kitchen",
+    "title": "",
+    "width": 600,
+    "height": 337,
+    "blurData": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACQAQCdASoQAAkABUB8JQBOgBLbqTAA+R7CfJ6Vnafy9h0ume6fHYTBTuL9Y5rex14OMbJ344eBgAAA",
+    "src": {
+      "full": "/media/optimized/images/full/kitchen-real-new2.webp",
+      "avif": "/media/optimized/images/avif/kitchen-real-new2.avif",
+      "thumb": "/media/optimized/images/thumb/kitchen-real-new2.webp"
+    }
+  },
+  {
     "id": "5",
     "type": "image",
     "category": "kitchen",
@@ -102,12 +116,12 @@ export const galleryItems: GalleryItem[] = [
     "category": "kitchen",
     "title": "",
     "width": 600,
-    "height": 338,
-    "blurData": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAkABUB8JQBOgBjxnbFEAAD64xVfCZXSHr0j8o0rfVq5yperU9rwtKMeOwa8oIosAAAA",
+    "height": 400,
+    "blurData": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAsABUB8JQBOgCIj2avZIAAA/gMU7tYiDRA+l6ryXcooGWRDrV74s+nJHoK49TBcNA8Zw2PE2AAA",
     "src": {
-      "full": "/media/optimized/images/full/kitchen-real-006.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-006.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-006.webp"
+      "full": "/media/optimized/images/full/kitchen-real-new.webp",
+      "avif": "/media/optimized/images/avif/kitchen-real-new.avif",
+      "thumb": "/media/optimized/images/thumb/kitchen-real-new.webp"
     }
   },
   {
@@ -125,76 +139,6 @@ export const galleryItems: GalleryItem[] = [
     }
   },
   {
-    "id": "8",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAsABUB8JbACdABDqAAA4lfPZPtXnv2TMOd6noosdomdfB6kZRLJdAMDLT7vPV7lCY5+Al50AAAA",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-008.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-008.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-008.webp"
-    }
-  },
-  {
-    "id": "9",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAsABUB8JbACdABWWKYAAP5UEjsuZS/RgQbK08ejMVSRp7wbMOPbry/rJCMr9aoVZDqAAAA=",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-009.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-009.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-009.webp"
-    }
-  },
-  {
-    "id": "10",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAgCdASoQAAsABUB8JbACdAEf42n942+AAP3iuLowDcBxUjfynoH5BAKr0E2IPU3U7SNTW9KAAA==",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-010.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-010.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-010.webp"
-    }
-  },
-  {
-    "id": "11",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsABUB8JbACdACd1Xk4AADyfqzNu6FfX2qETD9c/buscM105u3ids/3sEHafACQYQTIcycoEVu4BOGCMU/55IH2QXQAAAA=",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-011.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-011.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-011.webp"
-    }
-  },
-  {
-    "id": "12",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsABUB8JZgCdAED4SMZkAAA+vBE2TeUPdgIeYgNMr46yGJq1K4/rnMOyh1BSDH4m1XQYpLoRAm7AwAAAA==",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-012.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-012.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-012.webp"
-    }
-  },
-  {
     "id": "13",
     "type": "image",
     "category": "kitchen",
@@ -206,34 +150,6 @@ export const galleryItems: GalleryItem[] = [
       "full": "/media/optimized/images/full/kitchen-real-013.webp",
       "avif": "/media/optimized/images/avif/kitchen-real-013.avif",
       "thumb": "/media/optimized/images/thumb/kitchen-real-013.webp"
-    }
-  },
-  {
-    "id": "14",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAsABUB8JagCdAEVS/yrBDwAAP6MWoX1oBEtqoNmg3qPDarsKjvQcA/NpIRxPtMpWvfg0BhYa8NMgAA=",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-014.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-014.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-014.webp"
-    }
-  },
-  {
-    "id": "15",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 600,
-    "height": 400,
-    "blurData": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAQCdASoQAAsABUB8JaACdADdYWcAAPhdw8v9cUlRlG2lskKcU1+m7rE5ydquxjvZhXdEIe6jioFMLEp4Y08y0gNtIp7DQD2GEwQtOuAAAA==",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-015.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-015.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-015.webp"
     }
   },
   {
