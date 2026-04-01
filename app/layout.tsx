@@ -23,9 +23,9 @@ export default function RootLayout({
       <head>
         <link rel="dns-prefetch" href="https://magppie.com" />
         <link rel="preload" href="/hero-compressed.mp4" as="video" type="video/mp4" />
-        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-001.webp" as="image" />
-        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-002.webp" as="image" />
-        <link rel="preload" href="/media/optimized/images/thumb/kitchen-real-003.webp" as="image" />
+        <link rel="preload" href="/media/optimized/images/avif/kitchen-real-001.avif" as="image" type="image/avif" />
+        <link rel="preload" href="/media/optimized/images/avif/kitchen-real-002.avif" as="image" type="image/avif" />
+        <link rel="preload" href="/media/optimized/images/avif/kitchen-real-003.avif" as="image" type="image/avif" />
       </head>
       <body>{children}</body>
     </html>

@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import type { GalleryItem as GalleryItemType } from "@/data/gallery";
 
 interface GalleryItemProps {
@@ -14,7 +13,7 @@ interface GalleryItemProps {
 export default function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   const thumbSrc = item.src.thumb || item.src.full;
   const isPriority = index < 6;
-  const [loaded, setLoaded] = useState(isPriority);
+  const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(isPriority);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -48,26 +47,41 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
       className="group relative aspect-[3/2] cursor-pointer overflow-hidden rounded-sm"
       onClick={onClick}
     >
-      {/* Shimmer placeholder */}
-      {!loaded && (
+      {/* Blur placeholder */}
+      {item.blurData && !loaded && (
+        <img
+          src={item.blurData}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover scale-110 blur-lg"
+        />
+      )}
+      {/* Shimmer fallback */}
+      {!item.blurData && !loaded && (
         <div className="absolute inset-0 animate-pulse bg-text-secondary/5" />
       )}
 
-      <Image
-        src={thumbSrc}
-        alt={item.title || item.category}
-        width={item.width || 600}
-        height={item.height || 400}
-        priority={isPriority}
-        loading={isPriority ? "eager" : "lazy"}
-        placeholder={item.blurData ? "blur" : "empty"}
-        blurDataURL={item.blurData}
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        onLoad={() => setLoaded(true)}
-        className={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-      />
+      {/* Native <picture> — serves AVIF to supported browsers, WebP fallback */}
+      {inView && (
+        <picture>
+          {item.src.avif && <source srcSet={item.src.avif} type="image/avif" />}
+          <source srcSet={thumbSrc} type="image/webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            ref={(el) => {
+              if (el && el.complete && el.naturalWidth > 0) setLoaded(true);
+            }}
+            src={thumbSrc}
+            alt={item.title || item.category}
+            loading={isPriority ? "eager" : "lazy"}
+            decoding="async"
+            onLoad={() => setLoaded(true)}
+            className={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </picture>
+      )}
 
       {/* Video play icon */}
       {item.type === "video" && loaded && (
