@@ -97,20 +97,6 @@ export const galleryItems: GalleryItem[] = [
     }
   },
   {
-    "id": "5",
-    "type": "image",
-    "category": "kitchen",
-    "title": "",
-    "width": 438,
-    "height": 600,
-    "blurData": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQAwCdASoQABYAPzmEuVOvKKWisAgB4CcJYgCdABhZ8tN2pQYAAPtq7epX1eui9TaANd1rV4tZ8+xP2in5mupAJKsKoXbgtqXE4gIle7ARJMcx4zPcMC2tJEgOvizsBhwAAA==",
-    "src": {
-      "full": "/media/optimized/images/full/kitchen-real-005.webp",
-      "avif": "/media/optimized/images/avif/kitchen-real-005.avif",
-      "thumb": "/media/optimized/images/thumb/kitchen-real-005.webp"
-    }
-  },
-  {
     "id": "6",
     "type": "image",
     "category": "kitchen",
