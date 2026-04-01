@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw media (too large for git)
+/public/media/raw/
+# optimized media (regenerated from raw)
+/public/media/optimized/
+# raw source visuals (too large for git, 279MB+)
+/public/Visuals/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

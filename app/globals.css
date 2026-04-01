@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-primary: #F5F0E8;
+  --color-bg-dark: #1A1A18;
+  --color-text-primary: #1B3B2A;
+  --color-text-secondary: #5C6B5E;
+  --color-text-light: #F5F0E8;
+  --color-accent: #C4A265;
+  --color-accent-subtle: rgba(196, 162, 101, 0.15);
+  --font-display: "SF Pro Display", -apple-system, "Helvetica Neue", sans-serif;
+  --font-body: "SF Pro Text", -apple-system, "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-primary);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  z-index: 100;
+  transform-origin: left;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Gallery grid */
+.masonry-grid {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Custom video controls */
+.video-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}
+.video-progress::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: none;
+}
+
+/* Kicker label style */
+.kicker {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
